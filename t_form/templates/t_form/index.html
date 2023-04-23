@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Try Site</title>
+  </head>
+  <body>
+    <h1>Try Form</h1>
+    <form method="POST" action="{% url 'index' %}" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form.as_p }}
+
+      <label>Total:</label>
+      <span id="total-label"></span>
+      <input type="hidden" id="total" name="total" value="">
+      <br>
+      <label>Difference:</label>
+      <span id="difference-label"></span>
+      <input type="hidden" id="difference" name="difference" value="">
+      <br><br>
+      <button type="button" id="calculate-button">Calculate</button>
+      <button type="submit">Submit</button>
+    </form>
+
+
+    <script>
+      let cash_reported = document.getElementById('id_cash_reported')
+      let inputFields = document.querySelectorAll('.input-field');
+
+      let calculateButton = document.getElementById('calculate-button');
+      calculateButton.addEventListener('click', calculateTotal);
+
+      function calculateTotal() {
+        let total = 0;
+        let currency = [.01, .05, .10, .25, 1, 5, 10, 20, 50 ,100]
+
+        for (let i = 0; i < inputFields.length; i++) {
+          total += parseFloat(inputFields[i].value * currency[i]);
+        }
+
+        let difference = total - cash_reported.value
+        document.getElementById('total-label').innerHTML = total.toFixed(2);
+        document.getElementById('difference-label').innerHTML = difference.toFixed(2);
+        
+        document.getElementById('total').value = total.toFixed(2);
+        document.getElementById('difference').value = difference.toFixed(2);
+      }
+    </script>
+  </body>
+</html>
