@@ -8,7 +8,7 @@
     <link href="style here">
   </head>
   <body>
-    <h1>Try Form</h1>
+    <h1>Teller</h1>
     <form method="POST" action="{% url 'index' %}" enctype="multipart/form-data">
       {% csrf_token %}
       {{ form.as_p }}
@@ -44,9 +44,6 @@
         let difference = total - cash_reported.value
         document.getElementById('total-label').innerHTML = total.toFixed(2);
         document.getElementById('difference-label').innerHTML = difference.toFixed(2);
-        
-        document.getElementById('total').value = total.toFixed(2);
-        document.getElementById('difference').value = difference.toFixed(2);
       }
     </script>
   </body>
