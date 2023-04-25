@@ -14,12 +14,14 @@ df['fifty_dollar_total'] = df['fifty_dollar'] * 50
 df['One_hundred_total'] = df['one_hundred'] * 100
 
 
-df_B = df[['location', 'name', 'date', 'cash_reported', 
+report = df[['location', 'name', 'date', 'cash_reported',
+'pennies_total', 'nickles_total', 'dimes_total', 'quarters_total',
 			'one_dollar_total',  'five_dollar_total',  'ten_dollar_total',  
 			'twenty_dollar_total',  'fifty_dollar_total',  'One_hundred_total']]
 
+report = report.T
 
-print(df_B.T)
+report.to_csv('Cash Report')
 
 
  

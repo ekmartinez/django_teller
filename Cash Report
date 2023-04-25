@@ -1,0 +1,15 @@
+,0,1,2,3,4,5
+location,BSP,BSP,BSP,BSC,BSC,BSC
+name,Erick Martinez,Michael Jordan,Scottie Pipen,Patrick Ewing,Isaiah Thomas,Piculin Ortiz
+date,2024-04-24,2024-04-25,2023-04-26,2023-04-27,2023-04-28,2023-04-29
+cash_reported,477.11,452.41,455.47,1443.66,732.7,456.05
+pennies_total,0.01,0.01,0.02,0.01,0.01,0.05
+nickles_total,0.25,0.1,0.1,0.05,0.1,0.05
+dimes_total,0.1,0.30000000000000004,0.1,0.1,0.4,0.2
+quarters_total,0.75,1.0,1.25,0.5,1.25,0.75
+one_dollar_total,1,6,4,3,6,5
+five_dollar_total,155,25,30,20,65,20
+ten_dollar_total,50,10,70,50,10,60
+twenty_dollar_total,20,60,100,120,100,20
+fifty_dollar_total,150,50,150,350,50,250
+One_hundred_total,100,300,100,900,500,100
