@@ -5,11 +5,11 @@ from .models import Report
 
 class ReportForm(ModelForm):
 
-	locs = [('BSP', 'Burrito San Patricio'), 
-			('BSC', 'Burrito Condado'),
-			('BGH', 'Burger Garden Hills'),
-			('BGC', 'Burger Condado'),
-			('BGP', 'Burger Ponce')]
+	locs = [('SNJ', 'San Juan'), 
+			('BAY', 'Bayamon'),
+			('GUA', 'Guaynabo'),
+			('CAR', 'Carolina'),
+			('CAG', 'Caguas')]
 	
 	location = forms.CharField(label='Location', widget=forms.Select(choices=locs))
 	name = forms.CharField(label="Name", max_length=100)

@@ -2,11 +2,11 @@ from django.db import models
 
 class Report(models.Model):
 
-    locs = [('BSP', 'Burrito San Patricio'), 
-            ('BSC', 'Burrito Condado'),
-            ('BGH', 'Burger Garden Hills'),
-            ('BGC', 'Burger Condado'),
-            ('BGP', 'Burger Ponce')]
+    locs = [('SNJ', 'San Juan'), 
+            ('BAY', 'Bayamon'),
+            ('GUA', 'Guaynabo'),
+            ('CAR', 'Carolina'),
+            ('CAG', 'Caguas')]
 
     location = models.CharField(max_length=3, choices=locs)
     name = models.CharField(max_length=100)

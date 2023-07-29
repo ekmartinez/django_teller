@@ -4,11 +4,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Try Site</title>
-    <link href="style here">
+    <title>Teller</title>
+    <link rel="stylesheet" href="{% static 't_form/style.css' %}">
   </head>
+  
   <body>
-    <h1>Try Form</h1>
+    <h1>Teller</h1>
     <form method="POST" action="{% url 'index' %}" enctype="multipart/form-data">
       {% csrf_token %}
       {{ form.as_p }}
@@ -25,7 +26,8 @@
       <button type="submit">Submit</button>
     </form>
 
-
+	
+	<!-- Move to static -->
     <script>
       let cash_reported = document.getElementById('id_cash_reported')
       let inputFields = document.querySelectorAll('.input-field');

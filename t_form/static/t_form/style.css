@@ -1,0 +1,118 @@
+/* Flex container for the entire page */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 80px;
+  background-color: #0077be;
+  color: white;
+  padding: 0 20px;
+}
+
+/* Logo image for the top bar */
+.header img {
+  height: 50px;
+  margin-right: 20px;
+}
+
+/* Main content */
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Form container */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form field labels */
+.form-container label {
+  width: 200px;
+  display: inline-block;
+  text-align: right;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+/* Form input fields */
+.form-container input[type="text"],
+.form-container select {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+
+/* Form button container */
+.form-container button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Form submit button */
+.form-container button[type="submit"] {
+  background-color: #0077be;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Form calculate button */
+.form-container #calculate-button {
+  background-color: #f1f1f1;
+  color: #0077be;
+  border: 2px solid #0077be;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+/* Form calculate button hover state */
+.form-container #calculate-button:hover {
+  background-color: #0077be;
+  color: white;
+}
+
+/* Graphic design content */
+.graphic-design {
+  /* Specify styles for graphic design content here */
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  background-color: #0077be;
+  color: white;
+}
+
